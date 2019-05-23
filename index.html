@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Train Schedule</title>
+<!-- Bootstrap goes here -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Bangers|Staatliches&display=swap" rel="stylesheet">
+<!-- CSS goes here -->
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<!-- Loading in the jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- moment js ref -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+</head>
+
+<!--header with title -->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Train Scheduling App</h1>
+    <p class="lead">Never miss your train again!</p>
+  </div>
+</div>
+
+        <!-- Table -->
+        <div class="panel" id="train-schedule">
+          <div class="panel-heading"><h3>Train Schedule</h3></div>
+          <div class="panel-body">
+        <table class="table">
+      <thead>
+
+          <!--column titles-->
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (in minutes)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+          </tr>
+        </thead>
+
+            <!--content goes here-->   
+            <tbody id="add-row"></tbody>
+          </table>
+        </div>
+    </div>
+      
+  <div class="card">
+    <div class="card-body">
+      <!-- Adding a Train -->
+      <div class="panel" id="add-train">
+        <div class="panel-heading">
+          <h3>Add A New Train</h3>
+        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <!-- Entry form -->
+      <div class="panel-body" id="entry-form">
+        <form>
+          <div class="form-group">
+            <label for="text">Train Name</label>
+            <input type="text" class="form-control" id="train-name">
+          </div>
+
+          <div class="form-group">
+            <label for="text">Destination</label>
+            <input type="text" class="form-control" id="destination">
+          </div>
+
+          <div class="form-group">
+            <label for="text">First Train Time</label>
+            <input type="text" class="form-control" id="first-train">
+          </div>
+
+          <div class="form-group">
+            <label for="text">Frequency (in minutes)</label>
+            <input type="text" class="form-control" id="frequency">
+          </div>
+
+          <button type="submit" id="add-train-btn" class="btn-success" id="addTrain">Add New Train</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Firebase Ref -->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<!-- Link to my js file -->
+<script type="text/javascript" src="./assets/js/app.js"></script>
+
+<footer>
+  &copy Andrew Eldenburg, 2019.
+</footer>
+</body>
+</html>
